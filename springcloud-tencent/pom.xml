@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xmxe</groupId>
+	<artifactId>springcloud-tencent</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+
+	<parent>
+		<groupId>com.springcloud</groupId>
+		<artifactId>springcloud</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<!-- 默认值为../pom.xml 查找顺序：relativePath元素中的地址–本地仓库–远程仓库 设定一个空值将始终从仓库中获取，不从本地路径获取。 -->
+		<relativePath/>
+	</parent>
+
+	<modules>
+		<module>metadata-transfer-example</module>
+		<module>polaris-discovery-example</module>
+		<module>polaris-ratelimit-example</module>
+		<module>polaris-circuitbreaker-example</module>
+		<module>polaris-gateway-example</module>
+		<module>polaris-config-example</module>
+		<module>polaris-router-example</module>
+		<module>polaris-router-grayrelease-example</module>
+	</modules>
+
+	<properties>
+		<maven.deploy.skip>true</maven.deploy.skip>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.owasp.esapi</groupId>
+				<artifactId>esapi</artifactId>
+				<version>2.3.0.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

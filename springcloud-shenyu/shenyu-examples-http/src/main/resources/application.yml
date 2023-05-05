@@ -1,0 +1,26 @@
+server:
+  port: 8189
+  address: 0.0.0.0
+
+shenyu:
+  register:
+    registerType: http #zookeeper #etcd #nacos #consul
+    serverLists: http://localhost:9095 #localhost:2181 #http://localhost:2379 #localhost:8848
+    props:
+      username: admin
+      password: 123456
+  client:
+      http:
+        props:
+          contextPath: /http
+          appName: http
+#          port: 8189
+
+logging:
+  level:
+    root: info
+    org.springframework.boot: info
+    org.apache.ibatis: info
+    org.apache.shenyu.test.bonuspoint: info
+    org.apache.shenyu.test.lottery: debug
+    org.apache.shenyu.test: debug

@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: config-client2-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

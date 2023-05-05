@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.xmxe</groupId>
+	<artifactId>springcloud-config-server</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>springcloud-config-server</name>
+	<description>springcloud-config-server project</description>
+
+	<parent>
+		<groupId>com.xmxe</groupId>
+		<artifactId>springcloud-config</artifactId>
+		<version>1.0-SNAPSHOT</version>
+		<!-- 默认值为../pom.xml 查找顺序：relativePath元素中的地址–本地仓库–远程仓库 设定一个空值将始终从仓库中获取，不从本地路径获取。 -->
+		<relativePath/>
+	</parent>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- post请求http://localhost:8081/actuator/bus-refresh刷新所有-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--里面有spring-cloud-starter-stream-kafka spring-cloud-bus两个依赖,所以不用继续添加这两个依赖 只添加spring-cloud-starter-bus-kafka即可-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-kafka</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${spring-boot.version}</version>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

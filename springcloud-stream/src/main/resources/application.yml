@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+      bindings:
+        greetings-in:
+          # 必须使用相同的Kafka主题greetings
+          destination: greetings
+          # 告诉Spring Cloud Stream在流中发送/接收我们的消息对象String。
+          contentType: application/json
+        greetings-out:
+          destination: greetings
+          contentType: application/json
