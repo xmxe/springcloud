@@ -1,0 +1,47 @@
+server:
+  session-timeout: 1800
+  port: 48080
+spring:
+  application:
+    name: DiscoveryCallerService
+  cloud:
+    tencent:
+      metadata:
+        content:
+          region: shanghai
+    polaris:
+      address: grpc://127.0.0.1:8091
+      namespace: default
+      enabled: true
+      discovery:
+        enabled: true
+        register: true
+        heartbeat:
+          enabled: true
+        health-check-url: /discovery/service/caller/healthCheck
+      stat:
+        enabled: true
+        port: 28081
+#    consul:
+#      port: 8500
+#      host: 127.0.0.1
+#      enabled: true
+#      discovery:
+#        enabled: true
+#        register: true
+#        health-check-path: /actuator/health
+#        health-check-interval: 10s
+#        instance-id: ${spring.application.name}:${server.port}
+#        service-name: ${spring.application.name}
+#        ip-address: localhost
+#        prefer-ip-address: true
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:7654/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - polaris-discovery

@@ -1,0 +1,33 @@
+server:
+  port: 8190
+  address: 0.0.0.0
+  ssl:
+    key-store: classpath:keystore.p12
+    key-password: 123456
+    key-store-password: 123456
+    key-alias: shenyu
+    key-store-type: PKCS12
+
+shenyu:
+  register:
+    registerType: http #zookeeper #etcd #nacos #consul
+    serverLists: http://shenyu-admin:9095 #localhost:2181 #http://localhost:2379 #localhost:8848
+    props:
+      username: admin
+      password: 123456
+  client:
+      http:
+        props:
+          contextPath: /order
+          protocol: https://
+          appName: order
+          port: 8190
+
+logging:
+  level:
+    root: info
+    org.springframework.boot: info
+    org.apache.ibatis: info
+    org.apache.shenyu.examples.bonuspoint: info
+    org.apache.shenyu.examples.lottery: debug
+    org.apache.shenyu.examples: debug

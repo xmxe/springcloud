@@ -1,0 +1,24 @@
+server:
+  port: 48081
+spring:
+  application:
+    name: RateLimitCalleeService
+  cloud:
+    polaris:
+      address: grpc://127.0.0.1:8091
+      namespace: default
+      enabled: true
+      ratelimit:
+        enabled: true
+        rejectRequestTipsFilePath: reject-tips.html
+        maxQueuingTime: 1000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - polaris-ratelimit
+logging:
+  level:
+    com.tencent.cloud.polaris: debug

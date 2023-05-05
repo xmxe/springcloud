@@ -1,0 +1,68 @@
+server:
+  port: 8089
+
+spring:
+  application:
+    name: zuul-service
+
+zuul:
+  # 敏感头部
+  sensitive-headers:
+    - Cookie,Set-Cookie,Authorization
+  routes:
+    api-a:
+      path: /api-a/**
+      # http://localhost:8089/api-a/hello_ribbon?name=a
+      serviceId: provider-service
+    netease:
+      path: /163/**
+      url : https://www.163.com/
+  host:
+    # 连接超时时间
+    connect-timeout-millis: 15000
+    # socket发送超时时间
+    socket-timeout-millis: 60000
+
+  # 代码自定义限流配置
+#  ratelimit:
+      # 按粒度拆分的临时变量key前缀
+#    key-prefix: zuul-ratelimit
+      # 启用开关
+#    enabled: true
+      # key存储类型，默认是IN_MEMORY本地内存，此外还有多种形式
+#    repository: REDIS
+      # 表示代理之后
+#    behind-proxy: true
+#    add-response-headers: false
+      # 全局限流策略，可单独细化到服务粒度
+#    default-policy-list:
+      # 在一个单位时间窗口的请求数量
+#      - limit: 18000
+      # 在一个单位时间窗口的请求时间限制
+#        quota: 360000
+      # 单位时间窗口
+#        refresh-interval: 60
+#        type:
+          # 可指定用户粒度
+#          - user
+          # 可指定客户端地址粒度
+#          - origin
+          # 可指定url粒度
+#          - url
+          # 请求方式
+#          - http_method
+
+
+
+#  prefix: /api-gateway Zuul配置访问前缀：访问时候需要加上前缀，eg：http://localhost:8089/api-gateway/api-a/hello_ribbon?name=a
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
