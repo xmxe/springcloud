@@ -16,9 +16,11 @@
 		<relativePath/>
 	</parent>
 
+	<properties>
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+	</properties>
+
 	<modules>
-		<module>springcloud-alibaba-nacos</module>
-		<module>springcloud-alibaba-sentinel</module>
 		<module>nacos-example</module>
 		<module>seata-example</module>
 		<module>sentinel-example</module>

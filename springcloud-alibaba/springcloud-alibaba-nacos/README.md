@@ -1,5 +1,0 @@
-- [GitHub Nacos config配置项](https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-config)
-- [GitHub Nacos discovery配置项](https://github.com/alibaba/spring-cloud-alibaba/wiki/Nacos-discovery)
-- [Nacos Server下载](https://github.com/alibaba/nacos/tags)
-- [Nacos文档](https://nacos.io/zh-cn/docs/what-is-nacos.html)
-- [Nacos中的配置文件如何实现加密传输](https://mp.weixin.qq.com/s/STYw3ny2cHWungTRbIvLcg)

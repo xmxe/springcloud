@@ -1,8 +1,0 @@
-- [Sentinel官网](https://sentinelguard.io/zh-cn/)
-- [sentinel-dashboard下载](https://github.com/alibaba/Sentinel/releases)
-- [GitHub Sentinel配置项](https://github.com/alibaba/spring-cloud-alibaba/wiki/Sentinel)
-- [限流神器Sentinel，不了解一下吗？](https://mp.weixin.qq.com/s/AJT6sRsSpAxCOM6fPQPkZw)
-- [阿里限流神器Sentinel夺命连环 17 问？](https://mp.weixin.qq.com/s/a7EsMPdowkpIhjb9_wUe3Q)
-- [Sentinel控制台配置限流](https://mp.weixin.qq.com/s/BhhiUrQECX-KS57rRbrRzQ)
-- [Sentinel集群限流探索](https://mp.weixin.qq.com/s/jSv1XlpRt4gem8TkXyKlGA)
-- [Spring Cloud Alibaba教程：使用Sentinel实现接口限流](https://mp.weixin.qq.com/s/Zlg_hWomvLEDp-ll5_mtYg)

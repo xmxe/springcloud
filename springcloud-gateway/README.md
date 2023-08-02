@@ -21,3 +21,4 @@
 - [网关系统就该这么设计（万能通用）](https://mp.weixin.qq.com/s/tRSLB1ojWtxN4dXdOH7guA)
 - [为什么我们的微服务中需要网关？](https://mp.weixin.qq.com/s/IwhfF7CxJMJMw6-WztgcPQ)
 - [Spring Cloud 微服务网关Gateway使用详解](https://blog.csdn.net/congge_study/article/details/129892885)
+- [Spring Cloud Gateway在微服务架构下的最佳实践](https://mp.weixin.qq.com/s/Xzoxeoy7FgDy4b9NHMView)

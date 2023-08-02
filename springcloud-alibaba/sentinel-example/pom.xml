@@ -18,7 +18,8 @@
     <modules>
         <module>sentinel-circuitbreaker-example</module>
         <module>sentinel-core-example</module>
-        <module>sentinel-feign-example</module>
+        <module>sentinel-openfeign-example</module>
+        <module>sentinel-resttemplate-example</module>
         <module>sentinel-spring-cloud-gateway-example</module>
         <module>sentinel-webflux-example</module>
     </modules>
