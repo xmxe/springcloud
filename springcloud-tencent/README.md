@@ -1,2 +1,0 @@
-- [北极星官网](https://polarismesh.cn/)
-- [北极星下载地址](https://github.com/polarismesh/polaris/releases)
